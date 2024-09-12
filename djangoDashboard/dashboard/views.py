@@ -4,8 +4,8 @@ from datetime import datetime
 from django.contrib import messages
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 def contact(request):
     if request.method == "POST":
