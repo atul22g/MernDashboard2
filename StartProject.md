@@ -7,10 +7,7 @@ pip install virtualenv
 virtualenv .venv
 ```
 ```
-cd .venv
-```
-```
-cd .\Scripts\
+cd .venv\Scripts\
 ```
 ```
  .\activate
