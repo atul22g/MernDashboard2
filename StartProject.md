@@ -22,10 +22,10 @@ cd ..
 cd ..
 ```
 ```
-pip install -r .\requirements.txt
-```
-```
 cd djangoDashboard
+```
+```
+pip install -r .\requirements.txt
 ```
 ```
 python manage.py runserver
