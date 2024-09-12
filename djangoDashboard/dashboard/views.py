@@ -1,12 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from dashboard.models import Contact
 from django.contrib import messages
+from django.contrib.auth import logout
 
 # Create your views here.
 def dashboard(request):
+    if not request.user.is_authenticated:
+        return redirect('signin')
     return render(request, 'dashboard.html')
 
 def contact(request):
+    if not request.user.is_authenticated:
+        return redirect('signin')
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -19,3 +24,7 @@ def contact(request):
             messages.warning(request, "Your message is not sent.")
             
     return render(request, 'contact.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')

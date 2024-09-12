@@ -42,15 +42,6 @@ Sign up {% endblock %} {% block bodyData %}
         />
         <label for="usenName">User Name</label>
       </div>
-      <div class="form-floating mb-2">
-        <input
-          placeholder="email@demo.com"
-          type="email"
-          name="email"
-          class="form-control"
-        />
-        <label for="email">email@demo.com</label>
-      </div>
       <div class="form-floating">
         <input
           type="password"
@@ -73,6 +64,7 @@ Sign up {% endblock %} {% block bodyData %}
         Sign up
       </button>
     </form>
+    <a href={% url "Signin" %}><button class="btn btn-info w-100 py-2" type="submit">Sign in</button></a>
   </main>
 </div>
 {% endblock %}
