@@ -6,12 +6,12 @@ from django.contrib.auth import logout
 # Create your views here.
 def dashboard(request):
     if not request.user.is_authenticated:
-        return redirect('signin')
+        return redirect('/')
     return render(request, 'dashboard.html')
 
 def contact(request):
     if not request.user.is_authenticated:
-        return redirect('signin')
+        return redirect('/')
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
